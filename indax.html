@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/910ce80589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>webpage</title>
+</head>
+<body>
+    <div class="container">
+         <header>
+             <div class="menu">
+                <a href="" class="logo">mamon.</a>
+                <ul>
+                     <li><a href="">home</a></li>
+                     <li><a href="">about</a></li>
+                     <li><a href="">products</a></li>
+                     <li><a href="">services</a></li>
+                     <li><a href="">blogs</a></li>
+                </ul>
+             </div>
+             <div class="btn">
+                 <button>Get the offer</button>
+             </div>
+         </header>
+      
+        <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-content">
+                     <div class="slide-info">
+                         <h1>Need a<br> Developer ?</h1>
+                         <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Obcaecati autem odit, dolor iusto officia error quas 
+                            nesciunt ipsa quasi vel unde soluta perspiciatis 
+                            vitae praesentium nostrum sunt expedita 
+                            libero? Alias.
+                         </p>
+                         <ul>
+                            <li>graphic design</li>
+                            <li>web design</li>
+                            <li>front end coding</li>
+                            <li>presentation</li>
+                         </ul>
+                     </div>
+                     <div class="icon-box">
+                        <i class="fa-solid fa-database"></i>
+                        <i class="fa-solid fa-pen-fancy"></i>
+                        <i class="fa-solid fa-laptop-code"></i>
+                     </div>
+                     <div class="hero-img">
+                         <img src="img/heroimg.png">
+                     </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-2">
+                <div class="slide-content">
+                     <div class="slide-info">
+                         <h1>Need a<br> Designer ?</h1>
+                         <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Obcaecati autem odit, dolor iusto officia error quas 
+                            nesciunt ipsa quasi vel unde soluta perspiciatis 
+                            vitae praesentium nostrum sunt expedita 
+                            libero? Alias.
+                         </p>
+                         <ul>
+                            <li>graphic design</li>
+                            <li>web design</li>
+                            <li>front end coding</li>
+                            <li>presentation</li>
+                         </ul>
+                     </div>
+                     <div class="icon-box">
+                        <i class="fa-solid fa-database"></i>
+                        <i class="fa-solid fa-pen-fancy"></i>
+                        <i class="fa-solid fa-laptop-code"></i>
+                     </div>
+                     <div class="hero-img">
+                         <img src="img/heroimg2.png">
+                     </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-3">
+                <div class="slide-content">
+                     <div class="slide-info">
+                         <h1>Need a<br> Writer ?</h1>
+                         <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Obcaecati autem odit, dolor iusto officia error quas 
+                            nesciunt ipsa quasi vel unde soluta perspiciatis 
+                            vitae praesentium nostrum sunt expedita 
+                            libero? Alias.
+                         </p>
+                         <ul>
+                            <li>graphic design</li>
+                            <li>web design</li>
+                            <li>front end coding</li>
+                            <li>presentation</li>
+                         </ul>
+                     </div>
+                     <div class="icon-box">
+                        <i class="fa-solid fa-database"></i>
+                        <i class="fa-solid fa-pen-fancy"></i>
+                        <i class="fa-solid fa-laptop-code"></i>
+                     </div>
+                     <div class="hero-img">
+                         <img src="img/heroimg3.png">
+                     </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="swiper-button-prev arrow"></div>
+        <div class="swiper-button-next arrow"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            speed:300,
+            effect:'fade',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+
+            anime({
+                targets:'.menu',
+                translateX:[-150, 0],
+                opacity:[0,1],
+                easing:'linear',
+            });
+            anime({
+                targets:'.btn',
+                translateX:[150, 0],
+                opacity:[0,1],
+                easing:'linear',
+            });
+            anime({
+                targets:'.slide-info',
+                translateY:[150, 0],
+                opacity:[0,1],
+                easing:'linear',
+            });
+
+            anime({
+                targets:'.icon-box',
+                translateX:[-150, 0],
+                opacity:[0,1],
+                easing:'linear',
+                delay:1000,
+            });
+            anime({
+                targets:'.hero-img',
+                translateX:[150, 0],
+                opacity:[0,1],
+                easing:'linear',
+                delay:1000,
+            });
+
+            anime({
+                targets:'.arrow',
+                translateY:[150, 0],
+                opacity:[0,1],
+                easing:'linear',
+                delay:1000,
+            });
+
+            swiper.on('slideChangeTransitionStart',function(){
+                anime({
+                targets:'.slide-info',
+                translateY:[150, 0],
+                opacity:[0,1],
+                easing:'linear',
+            });
+
+            anime({
+                targets:'.icon-box',
+                translateX:[-150, 0],
+                opacity:[0,1],
+                easing:'linear',
+                delay:1000,
+            });
+            anime({
+                targets:'.hero-img',
+                translateX:[150, 0],
+                opacity:[0,1],
+                easing:'linear',
+                delay:1000,
+            });
+            });
+    </script>
+</body>
+</html>
